@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
-import OSMMap from '../pages/OSMMap'
-import DarkMap from '../pages/DarkMap'
-import TopoMap from '../pages/TopoMap'
-import StamenMap from '../pages/StamenMap'
-import HikeMap from '../pages/HikeMap'
-import RealMap from '../pages/RealMap'
+import OSMMap from './pages/OSMMap'
+import DarkMap from './pages/DarkMap'
+import TopoMap from './pages/TopoMap'
+import StamenMap from './pages/StamenMap'
+import HikeMap from './pages/HikeMap'
+import RealMap from './pages/RealMap'
 
 function App() {
   return (
