@@ -8,7 +8,7 @@ type Props = {
 export default function MapView({ tileUrl }: Props) {
   return (
     <MapContainer
-      center={[41.1189, 1.2445]}
+      center={[41.1189, 1.2445] as [number, number]}
       zoom={13}
       style={{ height: '100vh', width: '100%' }}
     >
