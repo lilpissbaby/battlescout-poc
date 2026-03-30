@@ -1,4 +1,4 @@
-import MapView from '../src/components/Map/MapView'
+import MapView from '../components/Map/MapView'
 
 export default function OSMMap() {
   return (
