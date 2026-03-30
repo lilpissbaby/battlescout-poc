@@ -6,13 +6,13 @@ type Props = {
   tileUrl: string
 }
 
-const center: LatLngExpression = [41.1189, 1.2445]
+//const center: LatLngExpression = [41.1189, 1.2445]
 
 export default function MapView({ tileUrl }: Props) {
   return (
     <MapContainer
-      zoom={13}
-      style={{ height: '100vh', width: '100%' }}
+      //zoom={13}
+      //style={{ height: '100vh', width: '100%' }}
     >
       <TileLayer url={tileUrl} />
     </MapContainer>
