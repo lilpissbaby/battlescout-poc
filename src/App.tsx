@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
+import SplashScreen from './components/SplashScreen'
 import OSMMap from './pages/OSMMap'
 import DarkMap from './pages/DarkMap'
 import TopoMap from './pages/TopoMap'
@@ -8,6 +10,12 @@ import HikeMap from './pages/HikeMap'
 import RealMap from './pages/RealMap'
 
 function App() {
+  const [splashDone, setSplashDone] = useState(false)
+
+  if (!splashDone) {
+    return <SplashScreen onFinish={() => setSplashDone(true)} />
+  }
+
   return (
     <BrowserRouter>
       <div style={{ position: 'absolute', zIndex: 1000, padding: 10 }}>
@@ -17,7 +25,6 @@ function App() {
         <Link to="/stamen">Stamen</Link> |{" "}
         <Link to="/hike">Hike</Link> |{" "}
         <Link to="/real">Real</Link>
-        <Link to="/real">hola</Link>
       </div>
 
       <Routes>
@@ -27,7 +34,6 @@ function App() {
         <Route path="/stamen" element={<StamenMap />} />
         <Route path="/hike" element={<HikeMap />} />
         <Route path="/real" element={<RealMap />} />
-
       </Routes>
     </BrowserRouter>
   )
