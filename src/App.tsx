@@ -17,6 +17,7 @@ function App() {
         <Link to="/stamen">Stamen</Link> |{" "}
         <Link to="/hike">Hike</Link> |{" "}
         <Link to="/real">Real</Link>
+        <Link to="/real">hola</Link>
       </div>
 
       <Routes>
