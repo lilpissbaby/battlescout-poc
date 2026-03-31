@@ -1,18 +1,18 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
+import LatticeLayer from './LatticeLayer'
 import 'leaflet/dist/leaflet.css'
 
-type Props = {
-  tileUrl: string
-}
+type Props = { tileUrl: string }
 
 export default function MapView({ tileUrl }: Props) {
   return (
     <MapContainer
-      center={[41.1189, 1.2445]}
+      center={[41.1189, 1.2445] as [number, number]}
       zoom={13}
       style={{ height: '100vh', width: '100%' }}
     >
       <TileLayer url={tileUrl} />
+      <LatticeLayer />
     </MapContainer>
   )
 }
